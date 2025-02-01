@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPark - Find Your Perfect Parking Spot</title>
+    <link rel="stylesheet" href="../styles/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>SmartPark</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#locations">Locations</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Log In</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find and Reserve Your Perfect Parking Spot</h1>
+            <p>Save time and avoid stress with SmartPark's convenient parking solutions</p>
+            <div class="search-box">
+                <input type="text" placeholder="Enter location or venue name">
+                <button class="search-btn">Find Parking</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="how-it-works">
+        <h2>Why Choose SmartPark</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-search"></i>
+                <h3>Easy Search</h3>
+                <p>Find available parking spots in real-time with our smart search system</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>Save Time</h3>
+                <p>Reserve your spot in advance and avoid driving around looking for parking</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Booking</h3>
+                <p>Safe and secure payment system with guaranteed spot reservation</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Popular Locations -->
+    <section class="locations" id="locations">
+        <h2>Popular Locations</h2>
+        <div class="locations-grid">
+            <div class="location-card">
+                <img src="/api/placeholder/400/300" alt="Downtown">
+                <h3>Downtown</h3>
+                <p>Multiple secure locations in the heart of the city</p>
+                <button class="btn-view">View Spots</button>
+            </div>
+            <div class="location-card">
+                <img src="/api/placeholder/400/300" alt="Airport">
+                <h3>Airport</h3>
+                <p>Long-term and short-term parking options available</p>
+                <button class="btn-view">View Spots</button>
+            </div>
+            <div class="location-card">
+                <img src="/api/placeholder/400/300" alt="Shopping Mall">
+                <h3>Shopping Mall</h3>
+                <p>Convenient parking near major shopping centers</p>
+                <button class="btn-view">View Spots</button>
+            </div>
+            <div class="location-card">
+                <img src="/api/placeholder/400/300" alt="Railway Station">
+                <h3>Airport</h3>
+                <p>Convenient parking near major train stations</p>
+                <button class="btn-view">View Spots</button>
+            </div>
+            <div class="location-card">
+                <img src="/api/placeholder/400/300" alt="Public Park">
+                <h3>Airport</h3>
+                <p>Safe and accessible parking for park visitors</p>
+                <button class="btn-view">View Spots</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <h2>Simple Pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Hourly</h3>
+                <div class="price">$2<span>/hour</span></div>
+                <ul>
+                    <li>Flexible duration</li>
+                    <li>24/7 access</li>
+                    <li>Instant booking</li>
+                    <li>Cancel anytime</li>
+                </ul>
+                <button class="btn-book">Book Now</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Daily</h3>
+                <div class="price">$15<span>/day</span></div>
+                <ul>
+                    <li>24-hour parking</li>
+                    <li>In & out privileges</li>
+                    <li>Premium locations</li>
+                    <li>Best value</li>
+                </ul>
+                <button class="btn-book">Book Now</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Monthly</h3>
+                <div class="price">$200<span>/month</span></div>
+                <ul>
+                    <li>Reserved spot</li>
+                    <li>24/7 access</li>
+                    <li>Premium locations</li>
+                    <li>Special rates</li>
+                </ul>
+                <button class="btn-book">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Have questions? We're here to help!</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>1-800-PARK-NOW</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>support@smartpark.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Parking Avenue, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="btn-send">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SmartPark</h3>
+                <p>Making parking simple and stress-free</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#locations">Locations</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Refund Policy</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SmartPark. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/home.js"></script>
+</body>
+</html>
