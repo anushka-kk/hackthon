@@ -1,0 +1,238 @@
+/* Main styles for location details */
+.location-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/400');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 2rem;
+    margin-top: 60px;
+}
+
+.location-info {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.location-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.location-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+}
+
+/* Spot finder styles */
+.spot-finder {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-filters label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.search-filters input,
+.search-filters select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.parking-spots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1rem;
+}
+
+.parking-spot {
+    aspect-ratio: 1;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.parking-spot.available {
+    background: #f0f9ff;
+    border-color: #2563eb;
+}
+
+.parking-spot.occupied {
+    background: #fee2e2;
+    border-color: #dc2626;
+    cursor: not-allowed;
+}
+
+.parking-spot.selected {
+    background: #2563eb;
+    border-color: #1d4ed8;
+    color: white;
+}
+
+/* Booking summary styles */
+.booking-summary {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.summary-details {
+    margin: 1.5rem 0;
+}
+
+.summary-details p {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-details .total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-top: 1px solid #ddd;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.btn-book {
+    width: 100%;
+    padding: 0.75rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-book:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.btn-book:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+/* Location details section */
+.location-details {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.amenities, .rules {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.amenities h2, .rules h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.amenities ul, .rules ul {
+    list-style: none;
+}
+
+.amenities li, .rules li {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-confirm {
+    width: 100%;
+    padding: 0.75rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .search-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .location-details {
+        grid-template-columns: 1fr;
+    }
+}
