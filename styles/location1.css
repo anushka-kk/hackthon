@@ -1,0 +1,320 @@
+/* Base Styles */
+.location-header {
+    background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(37, 99, 235, 0.9));
+    color: white;
+    padding: 4rem 2rem;
+    margin-top: 60px;
+}
+
+.location-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.location-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Main Booking Layout */
+.location-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+}
+
+.spot-selection {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.date-time-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+/* Parking Grid Styles */
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.parking-spot {
+    aspect-ratio: 1;
+    border: 3px solid #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+    position: relative;
+}
+
+.parking-spot.available {
+    border-color: #2563eb;
+    background: #f0f9ff;
+}
+
+.parking-spot.available:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+}
+
+.parking-spot.occupied {
+    background: #fee2e2;
+    border-color: #dc2626;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.parking-spot.selected {
+    background: #2563eb;
+    color: white;
+    animation: pulseSelect 1s ease;
+}
+
+@keyframes pulseSelect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Booking Summary */
+.booking-summary {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    height: fit-content;
+    border: 2px solid #2563eb20;
+}
+
+.summary-details {
+    margin: 1.5rem 0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-item.total {
+    font-weight: 600;
+    color: #2563eb;
+    border-bottom: none;
+    padding-top: 1rem;
+}
+
+.btn-book {
+    width: 100%;
+    padding: 1rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-book:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* Features Section */
+.location-features {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.amenities, .rules {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.amenities h2, .rules h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.amenities ul, .rules ul {
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.amenities li, .rules li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+.amenities li {
+    background: #f0f9ff;
+}
+
+.rules li {
+    background: #fff7ed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .location-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .date-time-picker {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+/* Add to location.css */
+
+/* Beautify Parking Spots Grid */
+.parking-spots-grid {
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.parking-spot {
+    background: white;
+    border-width: 3px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.parking-spot:not(.occupied):hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+}
+
+.parking-spot.available::after {
+    content: '✓';
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 0.8em;
+    color: #2563eb;
+    opacity: 0.7;
+}
+
+.parking-spot.occupied::after {
+    content: '✗';
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 0.8em;
+    color: #dc2626;
+}
+
+.parking-spot.selected {
+    animation: pulseSelect 1s ease;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+@keyframes pulseSelect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Enhance Booking Summary */
+.booking-summary {
+    border: 2px solid #2563eb20;
+    background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+}
+
+.summary-details p {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-details p:last-child {
+    border-bottom: none;
+}
+
+#bookSpot:not(:disabled) {
+    background-image: linear-gradient(to right, #2563eb, #1d4ed8);
+    box-shadow: 0 4px 6px rgba(29, 78, 216, 0.15);
+}
+
+/* Improve Time Slot Selector */
+#parkingTime {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1em;
+    appearance: none;
+    padding-right: 2.5rem;
+}

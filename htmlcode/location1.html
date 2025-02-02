@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPark - Location Details</title>
+    <link rel="stylesheet" href="../styles/location.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar (Same as homepage) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>SmartPark</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="#locations">Locations</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Log In</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Location Header -->
+    <div class="location-header">
+        <div class="location-info">
+            <h1 id="locationTitle">Downtown Parking</h1>
+            <p id="locationAddress">123 Main Street</p>
+            <div class="location-stats">
+                <span><i class="fas fa-car"></i> <span id="availableSpots">45</span> spots available</span>
+                <span><i class="fas fa-clock"></i> Open 24/7</span>
+                <span><i class="fas fa-shield-alt"></i> Secured Facility</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Booking Content -->
+    <main class="location-main">
+        <div class="spot-selection">
+            <div class="booking-controls">
+                <div class="date-time-picker">
+                    <div class="form-group">
+                        <label>Select Date</label>
+                        <input type="date" id="bookingDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Select Time</label>
+                        <select id="bookingTime">
+                            <!-- JS will populate -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parking-grid" id="parkingSpotsGrid">
+                <!-- JS will generate spots -->
+            </div>
+        </div>
+
+        <div class="booking-summary">
+            <h3>Your Booking</h3>
+            <div class="summary-details">
+                <div class="detail-item">
+                    <span>Location:</span>
+                    <span id="summaryLocation">-</span>
+                </div>
+                <div class="detail-item">
+                    <span>Date & Time:</span>
+                    <span id="summaryDateTime">-</span>
+                </div>
+                <div class="detail-item">
+                    <span>Duration:</span>
+                    <span id="summaryDuration">-</span>
+                </div>
+                <div class="detail-item total">
+                    <span>Total:</span>
+                    <span id="summaryTotal">$0.00</span>
+                </div>
+            </div>
+            <button class="btn-book" id="bookNowBtn" disabled>Confirm Booking</button>
+        </div>
+    </main>
+
+    <!-- Location Details Section -->
+    <section class="location-features">
+        <div class="amenities">
+            <h2><i class="fas fa-star"></i> Amenities</h2>
+            <ul id="amenitiesList">
+                <!-- JS will populate -->
+            </ul>
+        </div>
+        
+        <div class="rules">
+            <h2><i class="fas fa-exclamation-circle"></i> Rules</h2>
+            <ul id="rulesList">
+                <!-- JS will populate -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer (Same as homepage) -->
+    <footer class="footer">
+        <!-- Copy footer from homepage -->
+    </footer>
+
+    <script src="../scripts/location.js"></script>
+</body>
+</html>

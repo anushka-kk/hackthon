@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPark - Location Details</title>
+    <link rel="stylesheet" href="../styles/location.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar (Same as homepage) -->
+    <nav class="navbar">
+        <!-- ... (same navbar code) ... -->
+    </nav>
+
+    <div class="location-header">
+        <div class="location-info">
+            <h1 id="locationTitle">Downtown Parking</h1>
+            <p id="locationAddress">123 Main Street, City</p>
+            <div class="location-stats">
+                <span><i class="fas fa-car"></i> <span id="availableSpots">45</span> spots available</span>
+                <span><i class="fas fa-clock"></i> Open 24/7</span>
+                <span><i class="fas fa-shield-alt"></i> Security on premises</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="spot-finder">
+            <div class="search-filters">
+                <div class="date-picker">
+                    <label>Date:</label>
+                    <input type="date" id="parkingDate">
+                </div>
+                <div class="time-picker">
+                    <label>Time:</label>
+                    <select id="parkingTime">
+                        <option value="">Select time</option>
+                        <!-- JavaScript will populate times -->
+                    </select>
+                </div>
+                <div class="duration-picker">
+                    <label>Duration:</label>
+                    <select id="parkingDuration">
+                        <option value="1">1 hour</option>
+                        <option value="2">2 hours</option>
+                        <option value="4">4 hours</option>
+                        <option value="8">8 hours</option>
+                        <option value="24">24 hours</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="parking-spots-grid" id="parkingSpotsGrid">
+                <!-- JavaScript will populate parking spots -->
+            </div>
+        </div>
+
+        <div class="booking-summary" id="bookingSummary">
+            <h3>Booking Summary</h3>
+            <div class="summary-details">
+                <p>Selected Spot: <span id="selectedSpot">--</span></p>
+                <p>Date: <span id="summaryDate">--</span></p>
+                <p>Time: <span id="summaryTime">--</span></p>
+                <p>Duration: <span id="summaryDuration">--</span></p>
+                <p>Rate: <span id="summaryRate">--</span></p>
+                <p class="total">Total: <span id="summaryTotal">--</span></p>
+            </div>
+            <button id="bookSpot" class="btn-book" disabled>Book Now</button>
+        </div>
+    </div>
+
+    <div class="location-details">
+        <div class="amenities">
+            <h2>Amenities</h2>
+            <ul id="amenitiesList">
+                <!-- JavaScript will populate amenities -->
+            </ul>
+        </div>
+        <div class="rules">
+            <h2>Rules & Regulations</h2>
+            <ul id="rulesList">
+                <!-- JavaScript will populate rules -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Booking Confirmation</h2>
+            <div id="bookingDetails"></div>
+            <button id="confirmBooking" class="btn-confirm">Confirm Booking</button>
+        </div>
+    </div>
+
+    <!-- Footer (Same as homepage) -->
+    <footer class="footer">
+        <!-- ... (same footer code) ... -->
+    </footer>
+
+    <script src="../scripts/location-details.js"></script>
+</body>
+</html>

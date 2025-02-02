@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPark - Booking</title>
+    <link rel="stylesheet" href="../styles/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Same navbar as homepage -->
+    </nav>
+
+    <div class="booking-container">
+        <div class="booking-steps">
+            <div class="step active">
+                <span>1</span>
+                <p>Select Spot</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <p>Payment</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <p>Confirm</p>
+            </div>
+        </div>
+
+        <div class="booking-content">
+            <div class="vehicle-info">
+                <h2>Vehicle Details</h2>
+                <form id="vehicleForm">
+                    <div class="form-group">
+                        <label>License Plate</label>
+                        <input type="text" required pattern="[A-Z0-9]{6,8}">
+                    </div>
+                    <div class="form-group">
+                        <label>Vehicle Type</label>
+                        <select required>
+                            <option value="">Select</option>
+                            <option>Car</option>
+                            <option>Motorcycle</option>
+                            <option>SUV/Van</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="payment-info">
+                <h2>Payment Details</h2>
+                <div class="payment-card">
+                    <div id="cardElement"></div>
+                    <button class="btn-pay" onclick="processPayment()">Pay $<span id="totalAmount">0.00</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/booking.js"></script>
+</body>
+</html>
