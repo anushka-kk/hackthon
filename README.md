@@ -10,7 +10,7 @@
 - Member 2: [Sana.AT] - [MCAS,Vengara]
 
 ### Hosted Project Link
-[]
+[https://anushka-kk.github.io/hackthon/htmlcode/index.html]
 
 ### Project Description
 [SmartPark is a web-based application designed to streamline the parking experience for users. It offers flexible pricing options, real-time booking capabilities, and a user-friendly interface to make parking simple and stress-free.]
